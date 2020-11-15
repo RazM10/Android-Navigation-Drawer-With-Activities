@@ -51,6 +51,21 @@ public class BaseActivity extends AppCompatActivity implements NavigationView.On
     }
 
     @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // Handle action bar item clicks here. The action bar will
+        // automatically handle clicks on the Home/Up button, so long
+        // as you specify a parent activity in AndroidManifest.xml.
+        int id = item.getItemId();
+
+        //noinspection SimplifiableIfStatement
+        if (id == R.id.action_settings) {
+            Toast.makeText(this, "Settings", Toast.LENGTH_SHORT).show();
+        }
+
+        return super.onOptionsItemSelected(item);
+    }
+
+    @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
 
         switch (menuItem.getItemId()){
