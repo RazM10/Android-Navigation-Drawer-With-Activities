@@ -30,6 +30,14 @@ public class GalleryFragment extends Fragment {
                 textView.setText(s);
             }
         });
+
+        textView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                textView.setText("Text Changed");
+            }
+        });
+
         return root;
     }
 }
